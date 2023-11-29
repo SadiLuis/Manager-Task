@@ -2,13 +2,15 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+console.log(import.meta.env.VITE_APIKEY)
+
 const firebaseConfig = {
-  apiKey: "AIzaSyA28Q58_hDb6WZANZZc28oGAScN3ld6Jio",
-  authDomain: "toodoapp-20d19.firebaseapp.com",
-  projectId: "toodoapp-20d19",
-  storageBucket: "toodoapp-20d19.appspot.com",
-  messagingSenderId: "731764326025",
-  appId: "1:731764326025:web:ed9ab4c1b7637080d71058"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 export const app = initializeApp(firebaseConfig);

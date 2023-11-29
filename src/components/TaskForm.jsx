@@ -29,12 +29,12 @@ const TaskForm = () => {
           type="text"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
-          className="p-2 border border-gray-300 rounded flex-grow"
+          className="p-2 border border-red-500 shadow-sm shadow-black rounded flex-grow"
           placeholder="Add a new task..."
         />
         <button
           type="submit"
-          className="ml-2 px-4 py-2 bg-indigo-600 text-white rounded-md flex items-center"
+          className="ml-4 px-4 py-2 bg-indigo-600 hover:bg-purple-600 hover:scale-110 duration-700 text-white rounded-md flex items-center"
         >
           <RiCheckboxBlankLine size={20} className="mr-2" />
           Add Task

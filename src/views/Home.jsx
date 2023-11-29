@@ -16,13 +16,13 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
       <header className="flex items-center justify-between p-6 bg-white rounded-b-xl shadow-lg">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-8">
           <img
-            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+            src="/manager.jpg"
             alt="Logo"
-            className="h-8 w-8"
+            className="h-1/2 w-16 rounded-xl"
           />
-          <h2 className="text-xl font-bold text-gray-900">
+          <h2 className="text-2xl font-semibold text-black">
             Welcome, {user ? user.email : "User"}
           </h2>
         </div>

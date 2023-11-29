@@ -37,6 +37,13 @@ const Login = () => {
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
       >
+        <div className="flex items-center justify-center">
+        <img
+            src="/manager.jpg"
+            alt="Logo"
+            className="h-1/2 w-16 rounded-xl"
+          />
+        </div>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Login
         </h2>

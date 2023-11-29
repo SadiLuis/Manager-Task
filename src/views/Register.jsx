@@ -1,27 +1,27 @@
-import { useState } from "react"
-import { UserAuth } from "../context/AuthContext"
-import { Link, useNavigate } from "react-router-dom"
-import { motion } from "framer-motion"
+import { useState } from "react";
+import { UserAuth } from "../context/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Register = () => {
-  const navigate = useNavigate()
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [success, setSuccess] = useState(false)
-  const { signUp } = UserAuth()
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [success, setSuccess] = useState(false);
+  const { signUp } = UserAuth();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      await signUp(email, password)
-      setSuccess(true)
+      await signUp(email, password);
+      setSuccess(true);
       setTimeout(() => {
-        navigate("/")
-      }, 2000)
+        navigate("/");
+      }, 2000);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
@@ -33,11 +33,13 @@ const Register = () => {
       >
         <div className="flex items-center justify-center">
           <img
-            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+            src="/manager.jpg"
             alt="Logo"
-            className="h-12 w-12"
+            className="h-1/2 w-16 rounded-xl"
           />
-          <h2 className="ml-4 text-3xl font-extrabold text-gray-900">Sign Up</h2>
+          <h2 className="ml-4 text-3xl font-extrabold text-gray-900">
+            Sign Up
+          </h2>
         </div>
         <form onSubmit={handleSubmit} className="mt-8 space-y-6">
           <div className="rounded-md shadow-sm -space-y-px">
@@ -145,13 +147,16 @@ const Register = () => {
         )}
         <p className="mt-2 text-center text-sm text-gray-600">
           Already subscribed to Manager?{" "}
-          <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
+          <Link
+            to="/login"
+            className="font-medium text-indigo-600 hover:text-indigo-500"
+          >
             Sign In
           </Link>
         </p>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
